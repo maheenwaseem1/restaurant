@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#332116">
+
+    <title>All in One Foods | Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!--  LOGIN PAGE  -->
+
+    <section class="auth-screen login-screen" id="login">
+
+        <div class="auth-image">
+            <img src="images/home.jpg" alt="Restaurant food">
+
+            <div class="auth-image-overlay">
+                <span>ALL IN ONE FOODS</span>
+                <h2>Good food.<br>Good company.</h2>
+                <p>Make every meal a beautiful moment.</p>
+            </div>
+        </div>
+
+        <div class="auth-form-area">
+            <div class="auth-form">
+
+                <p class="eyebrow">WELCOME BACK</p>
+                <h1>Sign in<span>.</span></h1>
+                <p class="auth-description">
+                    Welcome back to your favourite table.
+                </p>
+
+                <form id="login-form">
+
+                    <label for="login-email">Email address</label>
+                    <input
+                        id="login-email"
+                        name="email"
+                        type="email"
+                        placeholder="you@gmail.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="login-password">Password</label>
+                    <input
+                        id="login-password"
+                        name="password"
+                        type="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <p
+                        class="form-message"
+                        id="login-message"
+                        aria-live="polite"
+                    ></p>
+
+                    <button
+                        class="primary-button auth-submit"
+                        type="submit"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    New here?
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="open-signup"
+                    >
+                        Create an account
+                    </button>
+                </p>
+
+                <p class="demo-note">
+                    Sure You Will Loved It.
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--  SIGNUP PAGE  -->
+
+    <section class="auth-screen signup-screen" id="signup" hidden>
+
+        <div class="auth-image signup-image">
+            <img src="images/food.jpg" alt="Freshly prepared food">
+
+            <div class="auth-image-overlay">
+                <span>ALL IN ONE FOODS</span>
+                <h2>Your table<br>is waiting.</h2>
+                <p>Discover dishes made for sharing.</p>
+            </div>
+        </div>
+
+        <div class="auth-form-area">
+            <div class="auth-form">
+
+                <p class="eyebrow">JOIN OUR TABLE</p>
+                <h1>Create account<span>.</span></h1>
+                <p class="auth-description">
+                    Create your account to explore our menu.
+                </p>
+
+                <form id="signup-form">
+
+                    <label for="signup-name">Full name</label>
+                    <input
+                        id="signup-name"
+                        name="name"
+                        type="text"
+                        placeholder="Your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="signup-email">Email address</label>
+                    <input
+                        id="signup-email"
+                        name="email"
+                        type="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="signup-password">Password</label>
+                    <input
+                        id="signup-password"
+                        name="password"
+                        type="password"
+                        placeholder="At least 6 characters"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <p
+                        class="form-message"
+                        id="signup-message"
+                        aria-live="polite"
+                    ></p>
+
+                    <button
+                        class="primary-button auth-submit"
+                        type="submit"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <button
+                        type="button"
+                        class="text-button"
+                        id="open-login"
+                    >
+                        Sign in
+                    </button>
+                </p>
+
+                <p class="demo-note">
+                   Sure You Will Loved It
+                </p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--  MAIN WEBSITE  -->
+
+    <div id="restaurant-app" hidden>
+
+        <!-- HEADER -->
+
+        <header class="site-header">
+
+            <a
+                class="brand"
+                href="#home"
+                aria-label="All in One Foods home"
+            >
+                <span class="brand-mark">A</span>
+
+                <span>
+                    ALL IN ONE
+                    <small>FOODS & GATHERINGS</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="#home">Home</a>
+                <a href="#about">Our Story</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reservation">Reservations</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    class="cart-toggle"
+                    id="cart-toggle"
+                    type="button"
+                >
+                    Cart
+                    <span id="cart-count">0</span>
+                </button>
+
+                <button
+                    class="logout-button"
+                    id="logout-button"
+                    type="button"
+                >
+                    Log out
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!--  MAIN CONTENT  -->
+
+        <main>
+
+            <!-- HERO SECTION -->
+
+            <section class="hero section-wrap" id="home">
+
+                <div class="hero-copy">
+
+                    <p class="eyebrow">
+                        GOOD FOOD. BEAUTIFUL MOMENTS.
+                    </p>
+
+                    <h1>
+                        A little more<br>
+                        flavour in life<span>.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        From comforting classics to dishes worth sharing,
+                        find something delicious for every kind of gathering.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="primary-button" href="#menu">
+                            Explore Our Menu
+                        </a>
+
+                        <a class="outline-button" href="#reservation">
+                            Book a Table
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="note-line"></span>
+                        Made to be shared, remembered and enjoyed.
+                    </div>
+
+                </div>
+
+                <div class="hero-photo">
+
+                    <img
+                        src="images/home.jpg"
+                        alt="A delicious restaurant meal"
+                    >
+
+                    <div class="photo-caption">
+                        <span>FRESHLY PREPARED</span>
+                        <strong>Something for everyone</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ABOUT SECTION -->
+
+            <section class="about-section section-wrap" id="about">
+
+                <div class="about-photo">
+                    <img
+                        src="images/chef.jpg"
+                        alt="Our kitchen and food preparation"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="about-copy">
+
+                    <p class="eyebrow">OUR STORY</p>
+
+                    <h2>
+                        Food tastes better when it brings us together.
+                    </h2>
+
+                    <p>
+                        At All in One Foods, every meal is an opportunity
+                        to slow down, share a favourite dish and make
+                        memories. We bring familiar flavours and
+                        crowd-pleasing favourites together in one
+                        welcoming place.
+                    </p>
+
+                    <a class="underlined-link" href="#menu">
+                        Discover the menu <span>↗</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- CATEGORIES SECTION -->
+
+            <section
+                class="category-section section-wrap"
+                id="categories"
+            >
+
+                <div class="section-heading centered">
+                    <p class="eyebrow">FIND YOUR FAVOURITE</p>
+                    <h2>A craving for every mood.</h2>
+                </div>
+
+                <div class="category-list">
+                    <a href="#starters">Starters</a>
+                    <a href="#main-course">Main Course</a>
+                    <a href="#desserts">Desserts</a>
+                    <a href="#drinks">Drinks</a>
+                </div>
+
+            </section>
+
+
+            <!--  MENU SECTION  -->
+
+            <section class="menu-section section-wrap" id="menu">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">MADE WITH CARE</p>
+
+                    <h2>
+                        Good things are on the menu<span>.</span>
+                    </h2>
+
+                    <p>
+                        Choose your favourites and add them to your cart.
+                    </p>
+
+                </div>
+
+
+                <!-- STARTERS -->
+
+                <div class="menu-group" id="starters">
+
+                    <div class="group-heading">
+                        <h3>To begin with</h3>
+                        <span>STARTERS</span>
+                    </div>
+
+                    <div class="food-grid">
+
+                        <article class="food-card">
+
+                            <img
+                                src="images/samosa.png"
+                                alt="Chicken samosas"
+                                loading="lazy"
+                            >
+
+                            <div class="food-card-copy">
+
+                                <div class="food-title-row">
+                                    <h4>Chicken Samosa</h4>
+                                    <strong>Rs. 250</strong>
+                                </div>
+
+                                <p>
+                                    Crispy pastry with a savoury chicken filling.
+                                </p>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="Chicken Samosa"
+                                    data-price="250"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="food-card">
+
+                            <img
+                                src="images/wings.png"
+                                alt="Chicken wings"
+                                loading="lazy"
+                            >
+
+                            <div class="food-card-copy">
+
+                                <div class="food-title-row">
+                                    <h4>Chicken Wings</h4>
+                                    <strong>Rs. 550</strong>
+                                </div>
+
+                                <p>
+                                    Juicy wings tossed in a flavourful coating.
+                                </p>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="Chicken Wings"
+                                    data-price="550"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MAIN COURSE -->
+
+                <div class="menu-group" id="main-course">
+
+                    <div class="group-heading">
+                        <h3>The main event</h3>
+                        <span>MAIN COURSE</span>
+                    </div>
+
+                    <div class="food-grid">
+
+                        <article class="food-card">
+
+                            <img
+                                src="images/biryani.jpg"
+                                alt="Chicken biryani"
+                                loading="lazy"
+                            >
+
+                            <div class="food-card-copy">
+
+                                <div class="food-title-row">
+                                    <h4>Chicken Biryani</h4>
+                                    <strong>Rs. 450</strong>
+                                </div>
+
+                                <p>
+                                    Fragrant rice layered with warming spices.
+                                </p>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="Chicken Biryani"
+                                    data-price="450"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="food-card">
+
+                            <img
+                                src="images/karahi.jpg"
+                                alt="Chicken karahi"
+                                loading="lazy"
+                            >
+
+                            <div class="food-card-copy">
+
+                                <div class="food-title-row">
+                                    <h4>Chicken Karahi</h4>
+                                    <strong>Rs. 1400</strong>
+                                </div>
+
+                                <p>
+                                    A rich, traditional karahi packed with flavour.
+                                </p>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="Chicken Karahi"
+                                    data-price="1400"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESSERTS -->
+
+                <div class="menu-group" id="desserts">
+
+                    <div class="group-heading">
+                        <h3>A sweet finish</h3>
+                        <span>DESSERTS</span>
+                    </div>
+
+                    <div class="food-grid">
+
+                        <article class="food-card">
+
+                            <img
+                                src="images/cake.jpg"
+                                alt="Chocolate cake"
+                                loading="lazy"
+                            >
+
+                            <div class="food-card-copy">
+
+                                <div class="food-title-row">
+                                    <h4>Chocolate Cake</h4>
+                                    <strong>Rs. 350</strong>
+                                </div>
+
+                                <p>
+                                    A rich chocolate treat for your sweet tooth.
+                                </p>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="Chocolate Cake"
+                                    data-price="350"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DRINKS -->
+
+                <div class="menu-group" id="drinks">
+
+                    <div class="group-heading">
+                        <h3>Something refreshing</h3>
+                        <span>DRINKS</span>
+                    </div>
+
+                    <div class="food-grid">
+
+                        <article class="food-card">
+
+                            <img
+                                src="images/lemonade.jpg"
+                                alt="Fresh lemonade"
+                                loading="lazy"
+                            >
+
+                            <div class="food-card-copy">
+
+                                <div class="food-title-row">
+                                    <h4>Fresh Lemonade</h4>
+                                    <strong>Rs. 200</strong>
+                                </div>
+
+                                <p>
+                                    A refreshing citrus drink, served chilled.
+                                </p>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="Fresh Lemonade"
+                                    data-price="200"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CHEF'S SPECIAL -->
+
+            <section
+                class="special-section section-wrap"
+                id="chefs-special"
+            >
+
+                <div class="section-heading">
+                    <p class="eyebrow">A LITTLE EXTRA SPECIAL</p>
+                    <h2>From our favourites to yours.</h2>
+                </div>
+
+                <div class="special-grid">
+
+                    <article class="special-card">
+
+                        <img
+                            src="images/bbq.jpg"
+                            alt="Barbecue platter"
+                            loading="lazy"
+                        >
+
+                        <div class="special-card-copy">
+
+                            <p class="eyebrow">MADE FOR SHARING</p>
+                            <h3>BBQ Platter</h3>
+
+                            <p>
+                                A generous spread of smoky, savoury favourites.
+                            </p>
+
+                            <div class="special-bottom">
+                                <strong>Rs. 2000</strong>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="BBQ Platter"
+                                    data-price="2000"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="special-card">
+
+                        <img
+                            src="images/pizza.jpg"
+                            alt="Special pizza"
+                            loading="lazy"
+                        >
+
+                        <div class="special-card-copy">
+
+                            <p class="eyebrow">A CROWD FAVOURITE</p>
+                            <h3>All in One Special Pizza</h3>
+
+                            <p>
+                                A delicious pizza made for sharing around the table.
+                            </p>
+
+                            <div class="special-bottom">
+                                <strong>Rs. 1500</strong>
+
+                                <button
+                                    class="add-button"
+                                    type="button"
+                                    data-name="All in One Special Pizza"
+                                    data-price="1500"
+                                >
+                                    Add to Cart <span>+</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- OFFERS -->
+
+            <section class="offers-section section-wrap" id="offers">
+
+                <div class="section-heading centered">
+                    <p class="eyebrow">A GOOD REASON TO GATHER</p>
+                    <h2>Make room for one more.</h2>
+                    <p>
+                        Bring your favourite people and make an occasion
+                        out of any meal.
+                    </p>
+                </div>
+
+                <div class="offer-grid">
+
+                    <article class="offer-card">
+
+                        <img
+                            src="images/chicken.jpg"
+                            alt="Freshly prepared chicken dish"
+                            loading="lazy"
+                        >
+
+                        <div>
+                            <span>FAMILY FAVOURITES</span>
+                            <h3>Something for the whole table</h3>
+                        </div>
+
+                    </article>
+
+
+                    <article class="offer-card">
+
+                        <img
+                            src="images/food.jpg"
+                            alt="A spread of delicious food"
+                            loading="lazy"
+                        >
+
+                        <div>
+                            <span>GOOD TIMES, GREAT FOOD</span>
+                            <h3>Make every gathering delicious</h3>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+<!-- GALLERY -->
+<section class="gallery-section section-wrap" id="gallery">
+
+    <div class="section-heading">
+        <p class="eyebrow">A LOOK AT THE TABLE</p>
+        <h2>A feast for the eyes<span>.</span></h2>
+        <p>From our kitchen to your table, discover every delicious detail.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <figure class="gallery-item gallery-large">
+            <img src="images/karahi.jpg"
+                 alt="Traditional chicken karahi"
+                 loading="lazy">
+            <figcaption>Traditional Karahi</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-tall">
+            <img src="images/biryani.jpg"
+                 alt="Aromatic chicken biryani"
+                 loading="lazy">
+            <figcaption>Chicken Biryani</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/bbq.jpg"
+                 alt="Fresh barbecue platter"
+                 loading="lazy">
+            <figcaption>Barbecue Favourites</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-wide">
+            <img src="images/pizza.jpg"
+                 alt="Freshly baked special pizza"
+                 loading="lazy">
+            <figcaption>Special Pizza</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/burgers.jpg"
+                 alt="Delicious burgers"
+                 loading="lazy">
+            <figcaption>Juicy Burgers</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-tall">
+            <img src="images/cake.jpg"
+                 alt="Rich chocolate cake"
+                 loading="lazy">
+            <figcaption>Chocolate Cake</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/lemonade.jpg"
+                 alt="Fresh chilled lemonade"
+                 loading="lazy">
+            <figcaption>Fresh Lemonade</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/chicken.jpg"
+                 alt="Delicious chicken dish"
+                 loading="lazy">
+            <figcaption>Chef's Favourites</figcaption>
+        </figure>
+
+        <figure class="gallery-item gallery-wide">
+            <img src="images/food.jpg"
+                 alt="A spread of restaurant dishes"
+                 loading="lazy">
+            <figcaption>Made for Sharing</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/green.jpg"
+                 alt="Fresh ingredients"
+                 loading="lazy">
+            <figcaption>Fresh Ingredients</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/samosa.png"
+                 alt="Crispy chicken samosas"
+                 loading="lazy">
+            <figcaption>Crispy Samosas</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="images/wings.png"
+                 alt="Seasoned chicken wings"
+                 loading="lazy">
+            <figcaption>Chicken Wings</figcaption>
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+            <!-- RESERVATION -->
+
+            <section
+                class="reservation-section section-wrap"
+                id="reservation"
+            >
+
+                <div class="reservation-intro">
+
+                    <p class="eyebrow">SAVE YOUR SEAT</p>
+
+                    <h2>
+                        There's always room at the table<span>.</span>
+                    </h2>
+
+                    <p>
+                        Planning a meal with friends or family?
+                        Send us your reservation request.
+                    </p>
+
+                    <div class="reservation-detail">
+                        <span>01</span>
+                        <p>Choose a date and time that suits you.</p>
+                    </div>
+
+                    <div class="reservation-detail">
+                        <span>02</span>
+                        <p>Tell us how many guests are joining.</p>
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="reservation-form"
+                    id="reservation-form"
+                >
+
+                    <div class="field">
+                        <label for="customer-name">Your name</label>
+                        <input
+                            id="customer-name"
+                            name="name"
+                            type="text"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="customer-email">Email address</label>
+                        <input
+                            id="customer-email"
+                            name="email"
+                            type="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="booking-date">Date</label>
+                        <input
+                            id="booking-date"
+                            name="date"
+                            type="date"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="booking-time">Time</label>
+                        <select id="booking-time" name="time" required>
+                            <option value="">Choose a time</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="guests">Number of guests</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 guest</option>
+                            <option value="2">2 guests</option>
+                            <option value="3">3 guests</option>
+                            <option value="4">4 guests</option>
+                            <option value="5">5 guests</option>
+                            <option value="6">6 guests</option>
+                            <option value="7">7 guests</option>
+                            <option value="8">8 guests</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="booking-message">
+                            Special request (optional)
+                        </label>
+                        <textarea
+                            id="booking-message"
+                            name="message"
+                            rows="3"
+                            placeholder="Anything we should know?"
+                        ></textarea>
+                    </div>
+
+                    <p
+                        class="form-message"
+                        id="booking-message-status"
+                        aria-live="polite"
+                    ></p>
+
+                    <button class="primary-button" type="submit">
+                        Request a Reservation
+                    </button>
+
+                    <p class="form-footnote">
+                         Reservation is sent.
+                    </p>
+
+                </form>
+
+            </section>
+
+
+            <!-- CONTACT -->
+
+            <section class="contact-section section-wrap" id="contact">
+
+                <div class="contact-copy">
+
+                    <p class="eyebrow">COME SAY HELLO</p>
+
+                    <h2>Good food is better together.</h2>
+
+                    <p>
+                        Have a question about the menu or a special gathering?
+                        We'd love to hear from you.
+                    </p>
+
+                    <div class="contact-line">
+                        <span>EMAIL</span>
+                        <a href="mailto:hello@example.com">
+                            allinone@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-line">
+                        <span>LOCATION</span>
+                        <p>Karachi, Pakistan</p>
+                    </div>
+
+                    <div class="contact-line">
+                        <span>HOURS</span>
+                        <p>Daily · 12 PM – 10 PM (sample hours)</p>
+                    </div>
+
+                </div>
+
+                <div class="contact-photo">
+
+                    <img
+                        src="images/cook.jpg"
+                        alt="Food being prepared in the kitchen"
+                        loading="lazy"
+                    >
+
+                    <div class="contact-photo-caption">
+                        ALL IN ONE FOODS
+                        <span>GOOD FOOD, SHARED MOMENTS.</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!--  FOOTER  -->
+
+        <footer class="site-footer">
+
+            <a class="footer-brand" href="#home">
+                ALL IN ONE FOODS
+            </a>
+
+            <p>Good food. Beautiful moments.</p>
+
+            <nav aria-label="Footer navigation">
+                <a href="#home">Home</a>
+                <a href="#about">Our Story</a>
+                <a href="#menu">Menu</a>
+                <a href="#reservation">Reservations</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <p class="copyright">
+                © <span id="current-year"></span>
+                All in One Foods.
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!--  CART OVERLAY  -->
+
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+        hidden
+    ></div>
+
+
+    <!--  CART DRAWER  -->
+
+    <aside
+        class="cart-drawer"
+        id="cart-drawer"
+        aria-label="Shopping cart"
+        aria-modal="true"
+        role="dialog"
+        hidden
+    >
+
+        <div class="cart-drawer-header">
+
+            <div>
+                <p class="eyebrow">YOUR SELECTION</p>
+                <h2>Your Cart<span>.</span></h2>
+            </div>
+
+            <button
+                type="button"
+                class="icon-button"
+                id="close-cart"
+                aria-label="Close cart"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-bottom">
+
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cart-total">Rs. 0</strong>
+            </div>
+
+            <button
+                type="button"
+                class="primary-button confirm-order-button"
+                id="confirm-order"
+            >
+                Confirm Order
+            </button>
+
+            <button
+                type="button"
+                class="outline-button continue-button"
+                id="continue-shopping"
+            >
+                Continue Shopping
+            </button>
+
+            <p class="form-footnote">
+                Sure You Will Loved It
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!--  ORDER CONFIRMATION  -->
+
+    <div
+        class="modal-backdrop"
+        id="order-modal"
+        hidden
+    >
+
+        <div
+            class="order-modal-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="order-title"
+        >
+
+            <div class="success-mark">✓</div>
+
+            <p class="eyebrow">ALL IN ONE FOODS</p>
+
+            <h2 id="order-title">
+                Order confirmed<span>.</span>
+            </h2>
+
+            <p class="modal-description">
+                Your demo order has been saved in this browser.
+            </p>
+
+            <div class="order-number">
+                <span>ORDER REFERENCE</span>
+                <strong id="order-reference"></strong>
+            </div>
+
+            <div
+                class="order-summary"
+                id="order-summary"
+            ></div>
+
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="order-total">Rs. 0</strong>
+            </div>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="close-order-modal"
+            >
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!--  TOAST MESSAGE  -->
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+</body>
+</html>
